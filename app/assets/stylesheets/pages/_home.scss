@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+
+body {
+    font: $body;
+}
+
+h1 {
+    font: $header;
+}
+
+@media only screen and (max-width: 769px) {
+    .banner {
+        margin-top: 4rem;
+        padding: 2rem;
+
+    }
+}
