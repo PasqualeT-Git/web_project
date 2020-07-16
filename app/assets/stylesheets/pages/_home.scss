@@ -1,9 +1,9 @@
 // Specific CSS for your home-page
-body, h5, p, .know_more {
+body, h5, h6, p, .know_more, .button_contact_us {
   font-family: $body_font;
 }
 
-h5, .know_more {
+h5, h6, .know_more, .button_contact_us{
   font-weight: bold;
 }
 
@@ -85,12 +85,37 @@ h1, h3 {
     background-image: url(bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 1000px;
+    
   }
-
+  
   .know_more {
     color: $typo_color_d;
     border-bottom: 1.5px solid $typo_color_d;
     height: 1.4rem;
+  }
+
+  .help {
+    width: 20rem;
+    margin: 10rem auto; 
+  }
+
+  .button_contact_us{
+    background-color: $b_c_primary;
+    height: 2.5rem;
+    width: 10rem;
+
+      a {
+        height: 100%;
+      }
+
+      h6, i {
+        margin: 0;
+        color: $typo_color_d;
+      }
+  }
+
+
+  .face {
+    height: 1000px;
   }
 }
