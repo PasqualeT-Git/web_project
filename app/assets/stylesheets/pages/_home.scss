@@ -1,6 +1,10 @@
 // Specific CSS for your home-page
-body, h5 {
-  font-family: $body;
+body, h5, p, .know_more {
+  font-family: $body_font;
+}
+
+h5, .know_more {
+  font-weight: bold;
 }
 
 h1, h3 {
@@ -71,5 +75,22 @@ h1, h3 {
     background-position-x: -4rem;
     background-position-y: 0rem;
     background-repeat: no-repeat;
+  }
+
+  .landing_about_us {
+    height: 25rem;
+    width: 100vw;
+    max-width: 414.4px;
+    margin: 0 auto;
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1000px;
+  }
+
+  .know_more {
+    color: $typo_color_d;
+    border-bottom: 1.5px solid $typo_color_d;
+    height: 1.4rem;
   }
 }
