@@ -1,7 +1,15 @@
 // Specific CSS for your home-page
-body, h5, h6, p, .know_more, .button_contact_us {
+ h5, h6, p, .know_more, .button_contact_us {
   font-family: $body_font;
+
 }
+
+body {
+  color: #472B43;
+  background-color: #FCFCFC;
+
+}
+
 
 h5, h6, .know_more, .button_contact_us{
   font-weight: bold;
@@ -12,82 +20,121 @@ h1, h3 {
   font-weight: bold;
 }
 
+// hero section //
+
+.banner-hero {
+  margin-top: 40px;
+  position: relative;
+  max-width: 308px;
+  z-index: 10;
+}
+
+.banner-hero__h1 {
+  width: 280px;
+}
+
+.banner-hero__img {
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 180px;
+  z-index: -10;
+}
+
+
+// services section //
+
+.services {
+  margin-top: 200px;
+}
+
+.services-cards {
+  margin-top: 40px;
+}
+
+.services-cards__card {
+  padding: 16px;
+  height: 240px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.services-cards__card-text {
+  position: absolute;
+  z-index: 10;
+}
+
+.services-cards__card-image {
+  height: 250px;
+  margin-top: -16px;
+  margin-left: 40px;
+}
+
+.card_yellow {
+  background-color: $yellow;
+}
+
+.card_dark {
+  background-color: $typo_color_d;
+  color: $typo_color_w;
+}
+
+.card_green {
+  background-color: $green;
+}
+
+
+// about us section //
+.landing-about-us {
+  width: 100%;
+  margin: 160px 0;
+  overflow: hidden;
+  position: relative;
+  margin-bottom:300PX ;
+}
+
+.about-bg {
+  width: 100%;
+  position: absolute;
+  height: 600px;
+  z-index: -10;
+  opacity: .2;
+  object: cover;
+}
+
+
+.landing-about-us__content {
+  padding: 60px;
+  width: 100%;
+  margin: 0;
+}
+
+.landing_about-us__title {
+  display: flex;
+  flex-direction: row;
+
+  h3 {
+    margin-top: 16px;
+
+  }
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.landing_about-us__description {
+  margin: 32px 0;
+  max-width: 800px;
+}
+
+
 @media only screen and (max-width: 769px) {
-  .banner {
-    margin-top: 4rem;
-    padding: 2rem;
-    position: relative;
-    max-width: 308px;
 
-     h1 {
-       width: 17rem;
-     }
 
-     img {
-       position: absolute;
-       bottom: 0;
-       right: -1rem;
-       z-index: -1;
-     }
-    }
-
-  .cards {
-    margin: auto;
-  }
-
-  .what_we_do {
-    margin: 6rem 1.2rem;
-  }
-
-  .wwd_card {
-    padding: 1.5rem;
-    height: 20rem;
-    border-radius: 2px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
-    margin-top: 1.3rem;
-    margin-bottom: 4rem;
-    width: 375.2px;
-  }
-
-  .digital_product {
-    background-image: url(home-service-web.svg);
-    background-position-x: 3.7rem;
-    background-position-y: 6rem;
-    background-color: #FFD666;
-    background-repeat: no-repeat;
-    background-size: 23rem;
-  }
-
-  .design {
-    background-image: url(home-service-design.png);
-    background-color: $typo_color_d;
-    color: $typo_color_w;
-    background-position-x: -2rem;
-    background-position-y: 1rem;
-    background-size: 27rem;
-    background-repeat: no-repeat;
-  }
-
-  .ux_consulting {
-    background-image: url(home-services-consulting.svg);
-    background-color: $b_c_primary;
-    background-size: 28rem;
-    background-position-x: -4rem;
-    background-position-y: 0rem;
-    background-repeat: no-repeat;
-  }
-
-  .landing_about_us {
-    height: 25rem;
-    width: 100vw;
-    max-width: 414.4px;
-    margin: 0 auto;
-    background-image: url(bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-  }
-  
   .know_more {
     color: $typo_color_d;
     border-bottom: 1.5px solid $typo_color_d;
@@ -96,7 +143,7 @@ h1, h3 {
 
   .help {
     width: 20rem;
-    margin: 10rem auto; 
+    margin: 10rem auto;
   }
 
   .button_contact_us{
@@ -114,8 +161,88 @@ h1, h3 {
       }
   }
 
-
   .face {
     height: 1000px;
   }
 }
+
+
+@media (min-width: 760px) and (max-width: 1019.9px) {
+  .banner-hero {
+    margin-top: 120px;
+    max-width: 400px;
+  }
+
+  .banner-hero__h1 {
+    width: 320px;
+    font-size: 48px;
+  }
+
+  .banner-hero__img {
+    margin-left: 240px;
+  }
+
+  .services-cards__card-image {
+    margin-left: 240px;
+  }
+
+  .landing-about-us__content {
+    padding: 60px 120px;
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1279.9px) {
+
+  .banner-hero__h1 {
+    width: 400px;
+    font-size: 56px;
+  }
+
+  .banner-hero__img {
+    margin-left: 280px;
+  }
+
+  .services-cards__card {
+    height: 160px;
+  }
+
+  .services-cards__card-image {
+    height: 160px;
+    margin-left: 480px;
+  }
+
+  .landing-about-us__content {
+    padding: 80px 160px;
+  }
+
+}
+
+@media screen and (min-width: 1280px) {
+  .banner-hero__h1 {
+    width: 400px;
+    font-size: 56px;
+  }
+
+  .banner-hero__img {
+    margin-left: 280px;
+  }
+
+  .services-cards__card {
+    height: 160px;
+  }
+
+  .services-cards__card-image {
+    height: 200px;
+    margin-left: 720px;
+  }
+
+  .landing-about-us__content {
+    padding: 80px 200px;
+  }
+}
+
+
+
+
+
+
