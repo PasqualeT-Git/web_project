@@ -1,1 +1,121 @@
 // Specific CSS for your home-page
+body, h5, h6, p, .know_more, .button_contact_us {
+  font-family: $body_font;
+}
+
+h5, h6, .know_more, .button_contact_us{
+  font-weight: bold;
+}
+
+h1, h3 {
+  font-family: $headers;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 769px) {
+  .banner {
+    margin-top: 4rem;
+    padding: 2rem;
+    position: relative;
+    max-width: 308px;
+
+     h1 {
+       width: 17rem;
+     }
+
+     img {
+       position: absolute;
+       bottom: 0;
+       right: -1rem;
+       z-index: -1;
+     }
+    }
+
+  .cards {
+    margin: auto;
+  }
+
+  .what_we_do {
+    margin: 6rem 1.2rem;
+  }
+
+  .wwd_card {
+    padding: 1.5rem;
+    height: 20rem;
+    border-radius: 2px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
+    margin-top: 1.3rem;
+    margin-bottom: 4rem;
+    width: 375.2px;
+  }
+
+  .digital_product {
+    background-image: url(home-service-web.svg);
+    background-position-x: 3.7rem;
+    background-position-y: 6rem;
+    background-color: #FFD666;
+    background-repeat: no-repeat;
+    background-size: 23rem;
+  }
+
+  .design {
+    background-image: url(home-service-design.png);
+    background-color: $typo_color_d;
+    color: $typo_color_w;
+    background-position-x: -2rem;
+    background-position-y: 1rem;
+    background-size: 27rem;
+    background-repeat: no-repeat;
+  }
+
+  .ux_consulting {
+    background-image: url(home-services-consulting.svg);
+    background-color: $b_c_primary;
+    background-size: 28rem;
+    background-position-x: -4rem;
+    background-position-y: 0rem;
+    background-repeat: no-repeat;
+  }
+
+  .landing_about_us {
+    height: 25rem;
+    width: 100vw;
+    max-width: 414.4px;
+    margin: 0 auto;
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+  .know_more {
+    color: $typo_color_d;
+    border-bottom: 1.5px solid $typo_color_d;
+    height: 1.4rem;
+  }
+
+  .help {
+    width: 20rem;
+    margin: 10rem auto; 
+  }
+
+  .button_contact_us{
+    background-color: $b_c_primary;
+    height: 2.5rem;
+    width: 10rem;
+
+      a {
+        height: 100%;
+      }
+
+      h6, i {
+        margin: 0;
+        color: $typo_color_d;
+      }
+  }
+
+
+  .face {
+    height: 1000px;
+  }
+}
