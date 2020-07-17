@@ -1,51 +1,64 @@
-<div class="banner">
-    <h1>developing ideas to create a better www.</h1>
-    <img src=<%= image_path 'coulored-logo.svg' %> alt="overall-digital logo">
-</div>
-
-<div class="what_we_do d-flex flex-column">
-  <div class="cards">
+<div class="container-overall">
+  <div class="banner-hero">
+      <h1 class="banner-hero__h1">developing ideas to create a better www.</h1>
+      <img src="<%= image_path 'coulored-logo.svg' %>" class="banner-hero__img" alt="overall-digital logo">
+  </div>
+  <div class="services">
     <h3>what we do</h2>
-    <div class="digital_product wwd_card">
-      <h5>DIGITAL PRODUCT</h3>
-      <p>We make digital products combining functionality and beauty to meet your goals.</p>
-    </div>
-    <div class="design wwd_card">
-      <h5>DESIGN</h5>
-      <p>We build elements that tell your story. Digital-first designs 100% adapted to the real world.</p>
-    </div>
-    <div class="ux_consulting wwd_card">
-      <h5>UX CONSULTING</h5>
-      <p>We can help you to improve, raise perceptions and create trust of your website.</p>
-    </div>
-  </div>
-</div>
-
-<div class="landing_about_us d-flex flex-column justify-content-around p-4">
-  <div class="us d-flex ">
-    <img src="<%= image_path 'logo.svg' %>" alt="overall-digital logo">
-    <h3 class="mt-4">us</h3>
-  </div>
-  <div class="description ml-3 mr-3">
-    <p>Overall is a London-based developer and creative team.</p><br>
-    <p>We’re a group of people who build products, brands and websites that help you to connect with your customers and grow faster.</p>
-  </div>
-  <div class="link d-flex align-items-center">
-    <%= link_to "KNOW MORE", about_path, class: "know_more ml-3"%>
-    <i class="fas fa-chevron-right ml-1" style="font-size: 0.45rem;"></i>
-  </div>
-</div>
-
-<div class="help">
-  <h3>We really want to help you</h3>
-  <div class="button_contact_us mt-4">
-    <%= link_to contact_path, class: "d-flex justify-content-around align-items-center" do %>
-      <div class="d-flex align-items-center">
-        <h6>CONTACT US</h6>
-        <i class="fas fa-chevron-right ml-1" style="font-size: 0.65rem;"></i>
+    <div class="services-cards">
+      <div class="services-cards__card card_yellow ">
+        <div class="services-cards__card-text">
+          <h5>DIGITAL PRODUCT</h5>
+          <p>We make digital products combining functionality and beauty to meet your goals.</p>
+        </div>
+        <%= image_tag 'home-service-web.svg', class: "services-cards__card-image" %>
       </div>
-    <% end %>
-  </div> 
+      <div class="services-cards__card card_dark">
+        <div class="services-cards__card-text">
+          <h5>DESIGN</h5>
+          <p>We build elements that tell your story. Digital-first designs 100% adapted to the real world.</p>
+        </div>
+        <%= image_tag 'home-service-design.png', class: "services-cards__card-image" %>
+      </div>
+      <div class="services-cards__card card_green">
+        <div class="services-cards__card-text">
+          <h5>UX CONSULTING</h5>
+          <p>We can help you to improve, raise perceptions and create trust of your website.</p>
+        </div>
+        <%= image_tag 'home-services-consulting.svg', class: "services-cards__card-image" %>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="face"></div>
+  <div class="landing-about-us">
+    <%= image_tag 'bg-gradient.png', class: "about-bg" %>
+    <div class="landing-about-us__content">
+      <div class="landing_about-us__title">
+        <%= image_tag 'logo.svg', class: "" %>
+        <h3>us</h3>
+      </div>
+      <div class="landing_about-us__description">
+        <p>Overall is a London-based developer and creative team.</p>
+        <p>We’re a group of people who build products, brands and websites that help you to connect with your customers and grow faster.</p>
+      </div>
+      <div class="link d-flex align-items-center">
+        <%= link_to "KNOW MORE", about_path, class: "know_more ml-3"%>
+        <i class="fas fa-chevron-right ml-1" style="font-size: 0.45rem;"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="">
+    <h3>We really want to help you</h3>
+    <div class="button_contact_us mt-4">
+      <%= link_to contact_path, class: "d-flex justify-content-around align-items-center" do %>
+        <div class="d-flex align-items-center">
+          <h6>CONTACT US</h6>
+          <i class="fas fa-chevron-right ml-1" style="font-size: 0.65rem;"></i>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<div class="face"></div></div>

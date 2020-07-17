@@ -2,6 +2,7 @@
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
+@import "components/navbar";
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
@@ -12,44 +13,36 @@
 @import "components/index";
 @import "pages/index";
 
-// Navbar CSS
-.navbar-lewagon {
-    justify-content: space-between;
-    background: white;
-  }
-  
-  .navbar-lewagon .navbar-collapse {
-    flex-grow: 0;
-  }
-  
-  .navbar-lewagon .navbar-brand img {
-    width: 40px;
-  }
+// basic styles per page
 
-  footer {
-    background-color: $typo_color_d;
-    width: 100vw;
-
-    p, a {
-      font-family: $body_font;
-      margin: 0 auto;
-    }
-
-    p {
-      color: $typo_color_w;
-    }
-  }
-  
-  @media only screen and (max-width: 769px) {
-    nav {
-      background-color: #FFFF;
-      height: 3.5rem;
-      position: fixed;
-      bottom: 0;
-      width: 100vw;
-    }
-
-    footer {
-      height: 27rem;
-    }
+.container-overall {
+  padding: 120px 60px 0 60px;
+  width: 100%;
+  margin: 0;
 }
+
+
+
+@media (min-width: 760px) and (max-width: 1019.9px) {
+  .container-overall {
+    padding: 160px 120px 0 120px;
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1279.9px) {
+
+  .container-overall {
+    padding: 160px 160px 0 160px;
+  }
+
+
+}
+
+@media screen and (min-width: 1280px) {
+  .container-overall {
+    padding: 160px 200px 0 200px;
+  }
+
+
+}
+
