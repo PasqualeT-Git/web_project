@@ -25,6 +25,20 @@
   .navbar-lewagon .navbar-brand img {
     width: 40px;
   }
+
+  footer {
+    background-color: $typo_color_d;
+    width: 100vw;
+
+    p, a {
+      font-family: $body_font;
+      margin: 0 auto;
+    }
+
+    p {
+      color: $typo_color_w;
+    }
+  }
   
   @media only screen and (max-width: 769px) {
     nav {
@@ -33,5 +47,9 @@
       position: fixed;
       bottom: 0;
       width: 100vw;
+    }
+
+    footer {
+      height: 27rem;
     }
 }
