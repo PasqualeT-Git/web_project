@@ -15,7 +15,7 @@ h5, h6, .know_more, .button_contact_us{
   font-weight: bold;
 }
 
-h1, h3 {
+h1, h3, h2 {
   font-family: $headers;
   font-weight: bold;
 }
@@ -40,11 +40,42 @@ h1, h3 {
   z-index: -10;
 }
 
+// animation hero //
+
+.animation-hero {
+  animation: hero-ease_out 3.2s ease-out;
+}
+
+@keyframes hero-ease_out{
+  0%{opacity: 0; margin-left:-300px;};
+  40%{opacity: 0; margin-left:-32px;};
+  100%{opacity: 1}
+}
+
+
+//rotate effect //
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  -webkit-animation-name:             rotate;
+  -webkit-animation-duration:         4s;
+  -webkit-animation-iteration-count:  infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+
 
 // services section //
 
 .services {
-  margin-top: 200px;
+  margin: 200px 0 160px 0;
 }
 
 .services-cards {
@@ -60,6 +91,11 @@ h1, h3 {
   overflow: hidden;
   position: relative;
 
+  &:hover .services-cards__card-image {
+    height: 270px;
+    margin-top: -24px;
+    margin-left: 20px;
+  }
 }
 
 .services-cards__card-text {
@@ -71,6 +107,8 @@ h1, h3 {
   height: 250px;
   margin-top: -16px;
   margin-left: 40px;
+  transition: ease-in-out .16s;
+
 }
 
 .card_yellow {
@@ -90,10 +128,9 @@ h1, h3 {
 // about us section //
 .landing-about-us {
   width: 100%;
-  margin: 160px 0;
   overflow: hidden;
   position: relative;
-  margin-bottom:300PX ;
+  margin-bottom: 40px;
 }
 
 .about-bg {
@@ -116,7 +153,7 @@ h1, h3 {
   display: flex;
   flex-direction: row;
 
-  h3 {
+  h2 {
     margin-top: 16px;
 
   }
@@ -131,40 +168,86 @@ h1, h3 {
   max-width: 800px;
 }
 
+// button underline style //
 
-@media only screen and (max-width: 769px) {
+.button-underline {
+  transition: ease-in .3s;
+  margin-left: 16px;
 
-
-  .know_more {
-    color: $typo_color_d;
-    border-bottom: 1.5px solid $typo_color_d;
-    height: 1.4rem;
+  &:hover {
+    color: $sup_link;
   }
 
-  .help {
-    width: 20rem;
-    margin: 10rem auto;
+}
+
+.button-underline__text {
+  color: $typo_color_d;
+  border-bottom: 1.5px solid $typo_color_d;
+  text-decoration: none;
+  font-weight: bold;
+  transition: ease-in .16s;
+
+  a{
+    text-decoration: none;
   }
 
-  .button_contact_us{
-    background-color: $b_c_primary;
-    height: 2.5rem;
-    width: 10rem;
-
-      a {
-        height: 100%;
-      }
-
-      h6, i {
-        margin: 0;
-        color: $typo_color_d;
-      }
+  &:hover {
+    border-bottom: 1.5px solid $sup_link;
+    text-decoration: none;
   }
 
-  .face {
-    height: 1000px;
+}
+
+.landing_about-us__chevron {
+  font-size: 12px;
+}
+
+//contact us section //
+
+.landing-contact {
+  margin-bottom: 160px;
+
+  h2 {
+    margin-bottom: 32px;
   }
 }
+
+.button-prim {
+  background-color: $b_c_primary;
+  padding: 16px 32px;
+  width: fit-content;
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.06);
+  transition: ease-in .2s;
+
+  a {
+    text-decoration: none;
+  }
+
+  h6, i {
+    margin: 0;
+    color: $typo_color_d;
+  }
+
+  i {
+    font-size: 12px;
+    margin: -1px 0 0 4px;
+  }
+
+  &:hover {
+    background-color: $hover_primary;
+    color: $hover_typo_d;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0);
+  }
+
+  &:active {
+    background-color: $hover_typo_d;
+    color: $b_c_primary;
+    box-shadow: inset 0px 0px 6px rgba(20, 2, 18, 0.3);
+  }
+}
+
+// media queries //
 
 
 @media (min-width: 760px) and (max-width: 1019.9px) {
@@ -180,6 +263,15 @@ h1, h3 {
 
   .banner-hero__img {
     margin-left: 240px;
+  }
+
+  .services-cards__card {
+
+    &:hover .services-cards__card-image {
+      height: 270px;
+      margin-top: -24px;
+      margin-left: 220px;
+    }
   }
 
   .services-cards__card-image {
@@ -200,6 +292,15 @@ h1, h3 {
 
   .banner-hero__img {
     margin-left: 280px;
+  }
+
+  .services-cards__card {
+
+    &:hover .services-cards__card-image {
+      height: 180px;
+      margin-top: -24px;
+      margin-left: 460px;
+    }
   }
 
   .services-cards__card {
@@ -225,6 +326,15 @@ h1, h3 {
 
   .banner-hero__img {
     margin-left: 280px;
+  }
+
+  .services-cards__card {
+
+    &:hover .services-cards__card-image {
+      height: 180px;
+      margin-top: -24px;
+      margin-left: 700px;
+    }
   }
 
   .services-cards__card {
