@@ -28,14 +28,13 @@
 }
 
 
-
 @media (min-width: 760px) and (max-width: 1019.9px) {
   .container-overall {
     padding: 160px 120px 0 120px;
   }
 
   .container-overall-about {
-    padding: 160px 60px 0 60px;
+    padding: 60px 60px 0 60px;
   }
 }
 
@@ -46,13 +45,17 @@
   }
 
   .container-overall-about {
-    padding: 160px 120px 0 120px;
+    padding: 60px 120px 0 120px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .container-overall, .container-overall-about {
+  .container-overall {
     padding: 160px 200px 0 200px;
+  }
+
+  .container-overall-about {
+    padding: 60px 200px 0 200px;
   }
 }
 
