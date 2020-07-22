@@ -1,10 +1,9 @@
 // hero section //
 
 .banner-hero__about {
-  background-image: url('bg_multy-color.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background : linear-gradient(132deg, #66FF88, #FF7066, #66D9FF, #66FF88, #472B43);
+  background-size : 400% 400%;
+  animation : Gradient 15s ease infinite;
   width: 100%;
   height: 560px;
   margin-bottom: 60px;
@@ -25,6 +24,23 @@
 .banner-hero__text {
   max-width: 420px;
 }
+
+// gradient effect
+
+
+/* Animate Background */
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
 
 // team section //
 
