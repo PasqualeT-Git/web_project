@@ -109,35 +109,40 @@
 
 @media (min-width: 760px) and (max-width: 1019.9px) {
   .content-navbar{
-    padding: 18px 120px 24px 120px;
+    padding: 18px 120px 18px 120px;
+    top: 0;
+    height: 72px;
   }
 
-  .navbar-section__brand {
-    flex-direction: row;
-    align-items: center;
-
-    p {
-      margin: 12px;
-      font-size: 19px;
+  .navbar-section__logosymbol {
+    display: block;
+    img {
+      height: 24px;
+      margin: 8px;
     }
   }
 
-  .navbar-logo {
-    width: 32px;
+  .navbar-section__brand {
+    display: none;
   }
 
   .navbar-selector {
     flex-direction: row;
     align-items: center;
+    margin-right: 12px;
 
     p {
-      margin: 12px;
-      font-size: 19px;
+      margin: 8px;
+      font-size: 16px;
     }
   }
 
   .navbar-selector__img {
-    width: 32px;
+    width: 20px;
+  }
+
+  .navbar-section__options {
+    width: 30%;
   }
 }
 
@@ -145,12 +150,13 @@
   .content-navbar{
     padding: 18px 160px 18px 160px;
     top: 0;
+    height: 72px;
   }
 
   .navbar-section__logosymbol {
     display: block;
     img {
-      height: 28px;
+      height: 24px;
       margin: 8px;
     }
   }
