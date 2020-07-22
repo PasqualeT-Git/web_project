@@ -1,0 +1,22 @@
+<div class="content-navbar">
+  <%= link_to root_path do %>
+    <div class="navbar-section__brand">
+      <%= image_tag 'logo.svg', class: "navbar-logo" %>
+      <p>home</p>
+    </div>
+  <% end %>
+  <div class="navbar-section__options">
+    <%= link_to contact_path do %>
+      <div class="navbar-selector">
+        <%= image_tag 'icon-mail.svg', class: "navbar-selector__img" %>
+        <p>contact</p>
+      </div>
+    <% end %>
+    <%= link_to about_path do %>
+      <div class="navbar-selector">
+        <%= image_tag 'icon-about_us.svg', class: "navbar-selector__img" %>
+        <p>us</p>
+      </div>
+    <% end %>
+  </div>
+</div>
