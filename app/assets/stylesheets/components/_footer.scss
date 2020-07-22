@@ -1,0 +1,38 @@
+.container-footer {
+  background-color: $typo_color_d;
+  color: $typo_color_w;
+  padding: 80px 60px 120px 60px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-content__mail {
+  margin-left: 24px;
+}
+
+.logo-footer {
+  margin-top: 24px;
+  margin-left: auto;
+}
+
+
+@media (min-width: 760px) and (max-width: 1019.9px) {
+  .container-footer {
+    padding: 60px 120px 120px 120px;
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1279.9px) {
+
+  .container-footer {
+    padding: 60px  160px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container-footer {
+    padding: 60px  200px;
+  }
+}

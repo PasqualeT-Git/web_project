@@ -13,24 +13,20 @@
 
   <body>
     <%# navbar %>
-    <nav>
+
+    <%= render 'shared/navbar' %>
+    <!-- <nav>
       <div class="d-flex justify-content-around align-items-center h-100">
         <%= link_to "Home", root_path %>
         <%= link_to "About", about_path %>
         <%= link_to "Contact", contact_path %>
         <%# link_to "Products", product_path %>
       </div>
-    </nav>
+    </nav> -->
 
     <%= yield %>
 
     <%# footer %>
-    <footer class="d-flex flex-column justify-content-around">
-      <div class="d-flex flex-column justify-content-around h-25">
-        <p class="w-75">if you have any doubt just  contact us on:</p>
-        <%= mail_to "info@overall-digital.com", "info@overall-digital.com", class: "w-75"%>
-      </div>
-      <img src=<%= image_path 'footer-light.svg' %> alt="footer logo">
-    </footer>
+    <%= render 'shared/footer' %>
   </body>
 </html>
