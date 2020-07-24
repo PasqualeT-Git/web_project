@@ -5,7 +5,7 @@ const element = document.getElementById('typing')
 const initTypedJs = () => {
  if (element) {
    new Typed('#typing', {
-    strings: ['creating','designing','testing','planning','developing', 'selecting' ],
+    strings: ['creating','designing','testing','planning','developing','selecting'],
     typeSpeed: 60,
     backSpeed: 100,
     showCursor: true,
