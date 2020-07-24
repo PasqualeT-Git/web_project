@@ -25,9 +25,6 @@
   max-width: 420px;
 }
 
-// gradient effect
-
-
 /* Animate Background */
 @keyframes Gradient {
   0% {
@@ -45,9 +42,8 @@
 // team section //
 
 .team-content {
-  padding: 20px;
-  max-width: 430px;
-  margin: 60px auto;
+  padding: 60px;
+
 }
 
 .team-about__title {
@@ -69,10 +65,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 20px 0;
 
     img {
-      width: 150px;
-      height: 200px;
+      width: 120px;
     }
 }
 
@@ -95,13 +91,12 @@
 .story-group {
   background-color: $hover_typo_l;
   margin-bottom: 100px;
-  padding: 40px;
+  padding: 60px;
   z-index: -2;
 }
 
 .story-group__description {
   position: relative;
-  width: 80%;
   margin: 0 auto;
   z-index: 1;
 
@@ -120,8 +115,8 @@
 // media queries //
 
 @media (min-width: 760px) and (max-width: 1019.9px) {
-  .story-group__description {
-    width: 70%;
+  .story-group {
+    padding: 60px 120px;
   }
 
   .team-content__group {
@@ -133,9 +128,16 @@
   }
 
   .team-content {
-    max-width: 570px;
+    padding: 60px 120px;
   }
 
+  .story-group__description {
+    img {
+      width: 60px;
+      right: 20px;
+      bottom: -18px;
+    }
+  }
 }
 
 @media (min-width: 1020px) and (max-width: 1279.9px) {
@@ -149,18 +151,45 @@
   }
 
   .team-content {
-    max-width: 740px;
+    padding: 60px 160px;
+  }
+
+  .team-single-content{
+    img {
+      width: 160px;
+    }
+  }
+
+  .story-group {
+    padding: 60px 160px;
+  }
+
+  .story-group__description {
+    img {
+      width: 60px;
+      right: 20px;
+      bottom: -18px;
+    }
   }
 }
 
 @media screen and (min-width: 1280px) {
+  .story-group {
+    padding: 60px 200px;
+  }
+
   .story-group__description {
-    width: 50%;
+    width: 80%;
+
+    img {
+      right: 20px;
+      width: 60px;
+    }
   }
 
   .team-content__group {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     #team-single-content__fabre {
       flex-direction: row-reverse;
@@ -168,14 +197,13 @@
   }
 
   .team-content {
-    max-width: 800px;
+    padding: 80px 200px;
   }
 
   .team-single-content {
 
     img {
-      width: 200px;
-      height: 267px;
+      width: 240px;
     }
   }
 }
