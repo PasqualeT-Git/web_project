@@ -21,5 +21,13 @@
         <p>us</p>
       </div>
     <% end %>
+    <% if current_user %>
+      <%= link_to admin_path do %>
+        <div class="navbar-selector navbar-admin">
+          <i class="fas fa-users-cog"></i>
+          <p>admin</p>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   get 'portfolio', to: 'pages#portfolio'
   get 'product', to: 'pages#product'
+  get 'admin', to: 'pages#admin'
   post 'new_customer', to: 'pages#new_customer'
   
   resources :customers
