@@ -4,8 +4,12 @@
     <title>Overall digital - </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag 'favicon-32x32.png', type: 'image/png' %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
@@ -14,7 +18,11 @@
     <%= render 'shared/navbar' %>
 
     <%= yield %>
+<<<<<<< HEAD
    
+=======
+
+>>>>>>> master
     <%= render 'shared/footer' %>
   </body>
 </html>
