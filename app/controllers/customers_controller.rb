@@ -9,7 +9,7 @@ class CustomersController < ApplicationController
     @customer = Customer.new(packets_params)
 
     if @customer.save
-      redirect_to about_path
+      redirect_to contact_path
     else
       render :new
     end
