@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+
   resources :contacts, only: [ :new, :create ]
+  devise_for :users
   root to: 'pages#home'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -7,4 +9,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   get 'portfolio', to: 'pages#portfolio'
   get 'product', to: 'pages#product'
+  post 'new_customer', to: 'pages#new_customer'
+  
+  resources :customers
 end

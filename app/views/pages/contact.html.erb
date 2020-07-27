@@ -1,14 +1,11 @@
-<div class="container-overall">
-  <div class="contact-content">
 
-      <div class="banner-hero">
-        <h1 class="banner-hero__h1 animation-hero">not the good one</h1>
-        <img src="<%= image_path 'coulored-logo.svg' %>" class="banner-hero__img rotate" alt="overall-digital logo">
-      </div>
-    <div class="contact-content__form">
 
-    </div>
-
-  </div>
-
+<div class="container" style="margin-top: 120px">
+  <%= simple_form_for(Customer.new) do |f| %>
+    <%= f.input :name, label: "full name", placeholder: 'e.g. Thomas Shelby' %>
+    <%= f.input :e_mail, label: "mail", placeholder: 'e.g. thomas@shelbybros.com' %>
+    <%= f.input :phone_number, label: "phone number", placeholder: '+44 0771 000 0000' %>
+    <%= f.input :message, label: "how can we help you?", placeholder: 'enter your message here...' %>
+    <%= f.submit "Submit", disable_with: 'Submiting...' %>
+  <% end %>
 </div>
