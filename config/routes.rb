@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/administrator', as: 'rails_admin'
   devise_for :users
-  resources :contacts, only: [ :new, :create ]
+ 
  
   root to: 'pages#home'
 

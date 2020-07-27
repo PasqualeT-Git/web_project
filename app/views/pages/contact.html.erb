@@ -5,7 +5,7 @@
   </div>
   <div class="container col-md-6 col-12 mb-5" style="margin-top: 120px">
     <%= simple_form_for(Customer.new) do |f| %>
-      <%= f.input :name, label: "full name", placeholder: 'e.g. Thomas Shelby', class: "label-text" %>
+      <%= f.input :name, label: "full name", placeholder: 'e.g. Thomas Shelby' %>
       <%= f.input :e_mail, label: "mail", placeholder: 'e.g. thomas@shelbybros.com' %>
       <%= f.input :phone_number, label: "phone number (optional)", placeholder: '+44 0771 000 0000' %>
       <%= f.input :message, label: "how can we help you?", placeholder: 'enter your message here...' %>
