@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/administrator', as: 'rails_admin'
   devise_for :users
 
   root to: 'pages#home'
@@ -10,5 +11,5 @@ Rails.application.routes.draw do
   get 'admin', to: 'pages#admin'
   post 'new_customer', to: 'pages#new_customer'
   
-  resources :customers
+  resources :customers, only: [:new, :create]
 end
