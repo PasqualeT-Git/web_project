@@ -3,38 +3,8 @@
     <h1 class="banner-hero__h1 animation-hero">feel free to contact us!</h1>
     <img src="<%= image_path 'coulored-logo.svg' %>" class="banner-hero__img rotate" alt="overall-digital logo">
   </div>
-    <div class="contact-content" >
-      <%= form_for @contact do |f| %>
-        <%= f.label :name %> <br>
-        <%= f.text_field :name,
-          required: true,
-          class: "label-text",
-          placeholder: "Thomas Shelby"
-        %>
-        <br>
-        <%= f.label :email %> <br>
-        <%= f.email_field :email,
-          required: true,
-          class: "label-text",
-          placeholder: "thomas_boss@shelbybros.com"
-        %>
-        <br>
-        <%= f.label :message %> <br>
-        <%= f.text_area :message,
-          as: :text,
-          class: "label-text__msg",
-          placeholder: "I need a presentation web for my new politic career"
-        %>
-        <div class="hidden">
-          <%= f.label :nickname %> <br>
-          <%= f.text_field :nickname, hint: 'leave this field blank' %>
-        </div>
-        <br>
-        <%= f.submit 'send message', class: "button-prim" %>
-      <% end %>
-    </div>
-    <div class="contact-textcontainer">
-      <p>or you can contact directly with us on:</p>
-      <%= mail_to "overall.digital.london@gmail.com", "overall.digital.london@gmail.com", class: "contact-textcontainer__link"%>
-    </div>
+  <div class="contact-textcontainer">
+    <p>or you can contact directly with us on:</p>
+    <%= mail_to "overall.digital.london@gmail.com", "overall.digital.london@gmail.com", class: "contact-textcontainer__link"%>
+  </div>
 </div>
