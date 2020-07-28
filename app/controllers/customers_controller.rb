@@ -11,8 +11,10 @@ class CustomersController < ApplicationController
     respond_to do |format|
       if @customer.save
         UserMailer.with(customer: @customer).welcome_email.deliver
-        
-        format.html {redirect_to(new_customer_path, notice: 'Your message has been successfully sent')}
+               
+        format.html { redirect_to(new_customer_path) }
+        format.js { render :partial => 'views/customers/create.js.erb' }
+        #raise
         #redirect_to contact_path
       else
         format.html { render action: 'new' }
