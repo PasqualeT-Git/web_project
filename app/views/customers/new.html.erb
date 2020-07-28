@@ -3,13 +3,27 @@
     <h1 class="banner-hero__h1 animation-hero">feel free to contact us!</h1>
     <img src="<%= image_path 'coulored-logo.svg' %>" class="banner-hero__img rotate" alt="overall-digital logo">
   </div>
-  <div class="container col-md-6 col-12 mb-5" style="margin-top: 120px">
+  <div class="contact-content" >
     <%= simple_form_for(@customer) do |f| %>
-      <%= f.input :name, label: "full name", placeholder: 'e.g. Thomas Shelby', input_html: { class: 'label-text' }  %>
-      <%= f.input :e_mail, label: "mail", placeholder: 'e.g. thomas@shelbybros.com', input_html: { class: 'label-text' } %>
-      <%= f.input :phone_number, label: "phone number (optional)", placeholder: '+44 0771 000 0000', input_html: { class: 'label-text' } %>
-      <%= f.input :message, label: "how can we help you?", placeholder: 'enter your message here...', input_html: { class: 'label-text__msg' } %>
-      <%= f.submit "Submit", disable_with: 'Submiting...', class: "button-prim"%>
+      <%= f.input :name,
+        label: "full name",
+        placeholder: 'Thomas Shelby',
+        input_html: { class: 'label-text' }  %>
+      <%= f.input :e_mail,
+        label: "mail",
+        placeholder: 'thomas@shelbybros.com',
+        input_html: { class: 'label-text' } %>
+      <%= f.input :phone_number,
+        label: "phone number (optional)",
+        placeholder: '+44 0771 000 0000',
+        input_html: { class: 'label-text' } %>
+      <%= f.input :message,
+        label: "how can we help you?",
+        placeholder: 'enter your message here...',
+        input_html: { class: 'label-text__msg' } %>
+      <%= f.submit "Submit",
+        disable_with: 'Submiting...',
+        class: "button-prim"%>
     <% end %>
   </div>
   <div class="contact-textcontainer">
