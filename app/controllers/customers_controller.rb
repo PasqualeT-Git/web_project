@@ -10,10 +10,12 @@ class CustomersController < ApplicationController
 
     respond_to do |format|
       if @customer.save
+        message = "Your message has been sent. Someone from the customer service will contact you shortly. Thanks for contacting us."
         UserMailer.with(customer: @customer).welcome_email.deliver
                
-        format.js { render :js => "welcomeUser();" }
         format.html {redirect_to(new_customer_path, notice: 'Your message has been successfully sent')}
+        format.js { render :js => "alert(#{message});" }
+        raise
         #redirect_to contact_path
       else
         format.html { render action: 'new' }
