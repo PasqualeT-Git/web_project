@@ -9,7 +9,7 @@
     </div>
   <% end %>
   <div class="navbar-section__options">
-    <%= link_to new_contact_path do %>
+    <%= link_to new_customer_path do %>
       <div class="navbar-selector">
         <%= image_tag 'icon-mail.svg', class: "navbar-selector__img" %>
         <p>contact</p>
@@ -22,7 +22,7 @@
       </div>
     <% end %>
     <% if current_user %>
-      <%= link_to admin_path do %>
+      <%= link_to rails_admin_path do %>
         <div class="navbar-selector navbar-admin">
           <i class="fas fa-users-cog"></i>
           <p>admin</p>
