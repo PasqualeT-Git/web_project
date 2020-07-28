@@ -8,10 +8,15 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(packets_params)
 
-    if @customer.save
-      redirect_to contact_path
-    else
-      render :new
+    respond_to do |format|
+      if @customer.save
+        UserMailer.with(customer: @customer).welcome_email.deliver
+        
+        format.html {redirect_to(new_customer_path, notice: 'Your message has been successfully sent')}
+        #redirect_to contact_path
+      else
+        format.html { render action: 'new' }
+      end
     end
   end
   
