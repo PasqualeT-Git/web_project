@@ -9,8 +9,15 @@
       <%= f.input :e_mail, label: "mail", placeholder: 'e.g. thomas@shelbybros.com', input_html: { class: 'label-text' } %>
       <%= f.input :phone_number, label: "phone number (optional)", placeholder: '+44 0771 000 0000', input_html: { class: 'label-text' } %>
       <%= f.input :message, label: "how can we help you?", placeholder: 'enter your message here...', input_html: { class: 'label-text__msg' } %>
-      <%= f.submit "Submit", disable_with: 'Submiting...', class: "button-prim"%>
+      <%= f.submit "Submit", class: "button-prim"%>
     <% end %>
+  </div>
+  <%# Modal for Welcome the customer %>
+  <div class="welcome_modal" id="modal1" >
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Your message has been sent. Someone from the customer service will contact you shortly. Thanks for contacting us.</p>
+    </div>
   </div>
   <div class="contact-textcontainer">
     <p>or you can contact our customer service directly on:</p>
