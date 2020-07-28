@@ -1,18 +1,3 @@
-//the commented rows are the per deffault navbar styles
-
-//.navbar-lewagon {
-//  justify-content: space-between;
-//  background: white;
-//}
-
-//.navbar-lewagon .navbar-collapse {
-//  flex-grow: 0;
-//}
-
-//.navbar-lewagon .navbar-brand img {
-//  width: 40px;
-//}
-
 .content-navbar {
   display: flex;
   flex-direction: row;
@@ -114,7 +99,7 @@
 
 
 @media (min-width: 760px) and (max-width: 1019.9px) {
-  .content-navbar{
+  .content-navbar {
     padding: 18px 120px 18px 120px;
     top: 0;
     height: 72px;
@@ -195,7 +180,7 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .content-navbar{
+  .content-navbar {
     padding: 18px 200px 18px 200px;
     top: 0;
   }
@@ -230,64 +215,4 @@
       font-size: 16px;
     }
   }
-}
-
-
-
-
-.navbar-lewagon {
-    justify-content: space-between;
-    background: white;
-  }
-
-  .navbar-lewagon .navbar-collapse {
-    flex-grow: 0;
-  }
-
-  .navbar-lewagon .navbar-brand img {
-    width: 40px;
-  }
-
-  footer {
-    background-color: $typo_color_d;
-    width: 100vw;
-
-    p, a {
-      font-family: $body_font;
-      margin: 0 auto;
-    }
-
-    p {
-      color: $typo_color_w;
-    }
-  }
-
-  @media only screen and (max-width: 769px) {
-    nav {
-      background-color: #FFF;
-      height: 3.5rem;
-      position: fixed;
-      bottom: 0;
-      width: 100vw;
-      z-index: 100000;
-    }
-
-    .content-navbar {
-      justify-content: center;
-    }
-
-    .navbar-admin {
-      p {
-        margin: 0;
-        padding-top: 6px;
-      }  
-
-      i {
-        font-size: 20px;
-      }
-    }
-
-    footer {
-      height: 27rem;
-    }
 }
