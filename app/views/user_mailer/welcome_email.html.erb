@@ -4,16 +4,21 @@
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
-  <body style="margin: 0; padding: 0; background: #FCFCFC; color: #472B43; font-family: 'Open Sans', sans-serif;">
+  <body style="margin: 0; padding: 0;  color: #472B43; font-family: 'Open Sans', sans-serif;">
     <div style="width: 100%;">
-      <div style="max-width: 576; min-width: 325px; padding: 24px; display: flex; justify-content: center;">
-        <h1>Welcome from overall-digital, <%= @customer.name %></h1>
-        <p>
-          You have successfully contact with us </p><br>
-        <p>A member of the team will contact you back as soon as possible.</p>
-        <p>
-        </p>
-        <p>Thanks for contacting us and have a great day!</p>
+      <div style="max-width: 576; min-width: 325px; ">
+        <div style="padding: 24px; flex-direction: column; margin: 0 auto;">
+          <h1>Welcome from overall-digital, <%= @customer.name %></h1>
+          <p>You have successfully contact with us </p>
+          <p><strong>A member of the team will contact you back as soon as possible.</strong></p>
+          <div style="max-width: 480px; margin: 24px; padding: 24px; background-color: #FcFcFc; border-radius: 4px;">
+             <h3> <i>You send us this message</i> </h3>
+            <p> <i>  <%= @customer.message %> </i></p>
+          </div>
+
+
+          <p>Thanks for contacting us and have a great day!</p>
+        </div>
       </div>
     </div>
   </body>
