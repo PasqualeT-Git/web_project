@@ -25,7 +25,7 @@ h1, h3, h2 {
 .banner-hero {
   margin-top: 40px;
   position: relative;
-  max-width: 308px;
+  width: 308px;
   z-index: 10;
 }
 
@@ -38,12 +38,21 @@ h1, h3, h2 {
   margin-top: -40px;
   margin-left: 180px;
   z-index: -10;
+  animation: hero-image_opacity .8s ease-out;
 }
 
 // animation hero //
 
 .animation-hero {
-  animation: hero-ease_out 2.4s ease-out;
+  animation: hero-ease_out 2.8s ease-out;
+}
+
+
+
+@keyframes hero-image_opacity {
+  0%{opacity: 0};
+  40%{opacity: 0};
+  100%{opacity: 1}
 }
 
 @keyframes hero-ease_out{
@@ -65,7 +74,7 @@ h1, h3, h2 {
 
 .rotate {
   -webkit-animation-name:             rotate;
-  -webkit-animation-duration:         4s;
+  -webkit-animation-duration:         6s;
   -webkit-animation-iteration-count:  infinite;
   -webkit-animation-timing-function: linear;
 }
@@ -79,7 +88,10 @@ h1, h3, h2 {
 }
 
 .services-cards {
-  margin-top: 40px;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 24px;
 }
 
 .services-cards__card {
@@ -87,14 +99,13 @@ h1, h3, h2 {
   height: 240px;
   border-radius: 2px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
-  margin: 20px 0;
   overflow: hidden;
   position: relative;
 
   &:hover .services-cards__card-image {
     height: 270px;
     margin-top: -24px;
-    margin-left: 20px;
+    margin-left: 40px;
   }
 }
 
@@ -106,9 +117,8 @@ h1, h3, h2 {
 .services-cards__card-image {
   height: 250px;
   margin-top: -16px;
-  margin-left: 40px;
+  margin-left: 60px;
   transition: ease-in-out .16s;
-
 }
 
 .card_yellow {
@@ -262,21 +272,14 @@ h1, h3, h2 {
     font-size: 48px;
   }
 
-  .banner-hero__img {
-    margin-left: 240px;
+  .services-cards__card-image {
+    margin-left: 200px;
   }
 
   .services-cards__card {
-
     &:hover .services-cards__card-image {
-      height: 270px;
-      margin-top: -24px;
-      margin-left: 220px;
+      margin-left: 180px;
     }
-  }
-
-  .services-cards__card-image {
-    margin-left: 240px;
   }
 
   .landing-about-us__content {
@@ -292,25 +295,7 @@ h1, h3, h2 {
   }
 
   .banner-hero__img {
-    margin-left: 280px;
-  }
-
-  .services-cards__card {
-
-    &:hover .services-cards__card-image {
-      height: 180px;
-      margin-top: -24px;
-      margin-left: 460px;
-    }
-  }
-
-  .services-cards__card {
-    height: 160px;
-  }
-
-  .services-cards__card-image {
-    height: 160px;
-    margin-left: 480px;
+    margin-left: 240px;
   }
 
   .landing-about-us__content {
@@ -321,34 +306,46 @@ h1, h3, h2 {
 
 @media screen and (min-width: 1280px) {
   .banner-hero__h1 {
-    width: 400px;
-    font-size: 56px;
-  }
-
-  .banner-hero__img {
-    margin-left: 280px;
-  }
-
-  .services-cards__card {
-
-    &:hover .services-cards__card-image {
-      height: 180px;
-      margin-top: -24px;
-      margin-left: 700px;
+    margin: 160px 120px;
+    position: relative;
+    width: 420px;
+    font-size: 68px;
+    z-index: 10;
+    h1 {
+      font-size: 64px;
     }
   }
 
-  .services-cards__card {
-    height: 160px;
+  .banner-hero {
+    max-width: 560px;
   }
 
-  .services-cards__card-image {
-    height: 200px;
-    margin-left: 720px;
+  .banner-hero__img {
+    margin: -200px 0 0 480px;
+  }
+
+  .services {
+    h3 {
+      font-size: 48px;
+    }
+  }
+
+  .services-cards {
+    margin: 120px 0;
   }
 
   .landing-about-us__content {
     padding: 80px 200px;
+
+    h3 {
+      font-size: 48px;
+    }
+  }
+
+  .landing-contact {
+    h2 {
+      font-size: 56px;
+    }
   }
 }
 
