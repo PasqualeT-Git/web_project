@@ -8,10 +8,6 @@
   flex-direction: column;
 }
 
-.footer-content__mail {
-  margin-left: 24px;
-}
-
 .logo-footer {
   margin-top: 24px;
   margin-left: auto;
@@ -22,6 +18,9 @@
   .container-footer {
     padding: 60px 120px 120px 120px;
   }
+  .footer-content__mail {
+    margin-left: 24px;
+  }
 }
 
 @media (min-width: 1020px) and (max-width: 1279.9px) {
@@ -29,10 +28,16 @@
   .container-footer {
     padding: 60px  160px;
   }
+  .footer-content__mail {
+    margin-left: 24px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .container-footer {
     padding: 60px  200px;
+  }
+  .footer-content__mail {
+    margin-left: 24px;
   }
 }
