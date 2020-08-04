@@ -1,15 +1,11 @@
 class Customer < ApplicationRecord
   
   validates :name, presence: true
-  validates :e_mail, presence: true #:validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  validates :e_mail,
+            presence: true,
+            :format => { :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/,
+                         :message => 'Invalid e-mail! Please provide a valid e-mail address' }
   validates :message, presence: true
   
 
-  # def headers
-  #   {
-  #     :subject => "Contact Form",
-  #     :to => "overall.digital.london@gmail.com",
-  #     :from => %("#{name}" <#{email}>)
-  #   }
-  # end
 end
