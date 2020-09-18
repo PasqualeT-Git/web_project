@@ -121,7 +121,7 @@
 
   .team-content__group {
     display: flex;
-
+    
     #team-single-content__fabre {
       flex-direction: row-reverse;
     }
@@ -203,6 +203,7 @@
   .team-content__group {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     #team-single-content__fabre {
       flex-direction: row-reverse;
