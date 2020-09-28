@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/portfolio', to: 'pages#portfolio'
   get '/product', to: 'pages#product'
+  get '/services', to: 'pages#services'
   get '/admin', to: 'pages#admin'
   post '/customers', to: 'customers#create', as: 'customer'
 

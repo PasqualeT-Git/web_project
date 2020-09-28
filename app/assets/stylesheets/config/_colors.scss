@@ -9,6 +9,12 @@ $green: #66FF88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
 
+$color: $green, $red, $blue;
+$key: random( length($color) );
+
+// $nth: nth( $color, $key );
+// $main-color: $nth !default;
+
 // Colors variables:
 $b_c_primary: #66FF88;
 $b_c_secundary: #66D9FF;

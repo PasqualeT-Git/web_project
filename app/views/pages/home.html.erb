@@ -4,7 +4,92 @@
     <img src="<%= image_path 'coulored-logo.svg' %>" class="banner-hero__img rotate" alt="overall-digital logo">
   </div>
   <div class="services">
-    <h3>what we do</h2>
+    <div class="landing_about-us__title" style="display: flex;">
+      <h3 style="margin-right: 8px;">we are</h3>
+      <%= image_tag 'logo.svg' %>
+      <h3>Overall,</h3>
+    </div>
+      <h3>and we develop.</h3>
+    <div class="services-container">
+      <div class="services">
+        <div class="services-section"  onmouseover="changeColor(this), getActiveDescription(this), showDesc(this)" onclick="openDescription(this)" id="ser_1">
+          <h2>webs</h2>
+          <span class="services-underline"></span>
+        </div>
+        <div class="services-description__hidden animation-description" id="des_1">
+          <h4>WEB DEVELOPEMENT</h3>
+          <p>We design, build and maintain beautiful websites to achieve your vision and goals. Whether you want a big amazon style store with lots of features or a beautiful one page website for your new startup, we do it all.</p>
+        </div>
+        <div class="services-section"  onmouseover="changeColor(this), getActiveDescription(this), showDesc(this)" onclick="openDescription(this)" id="ser_2">
+          <h2>ux</h2>
+          <span class="services-underline"></span>
+        </div>
+        <div class="services-description__hidden animation-description" id="des_2">
+          <h4>UX CONSULTING</h3>
+          <p>Are you trying to get your users to sign up or subscribe but just can’t quite get them there? We can help you optimize your user experience to achieve your goals.</p>
+        </div>
+        <div class="services-section"  onmouseover="changeColor(this), getActiveDescription(this), showDesc(this)" onclick="openDescription(this)" id="ser_3">
+          <h2>brands</h2>
+          <span class="services-underline"></span>
+        </div>
+         <div class="services-description__hidden animation-description" id="des_3">
+          <h4>BRAND</h3>
+          <p>Do you have a story to tell? We have the expertise to give your brand the attention and professional look and feel it deserves.</p>
+        </div>
+        <div class="services-section"  onmouseover="changeColor(this), getActiveDescription(this), showDesc(this)" onclick="openDescription(this)" id="ser_4">
+          <h2>social media</h2>
+          <span class="services-underline"></span>
+        </div>
+        <div class="services-description__hidden animation-description" id="des_4">
+          <h4>SOCIAL MEDIA MANAGEMENT</h3>
+          <p>Overall Digital is proud to be partnering with Tamay to offer social media management. </p>
+        </div>
+        <div class="services-section"  onmouseover="changeColor(this), getActiveDescription(this), showDesc(this)" onclick="openDescription(this)" id="ser_5">
+          <h2>photography</h2>
+          <span class="services-underline"></span>
+        </div>
+        <div class="services-description__hidden animation-description" id="des_5">
+          <h4>PHOTOGRAPHY</h3>
+          <p>We work with top London-based photographers to bring the best content possible to you. We manage all the production process so all you have to do is tell us what you want and wait for the magic to happen.</p>
+        </div>
+      </div>
+      <div class="services-desc">
+        <div class="services-description" id="des_1">
+          <h4>WEB DEVELOPEMENT</h3>
+          <p>We design, build and maintain beautiful websites to achieve your vision and goals. Whether you want a big amazon style store with lots of features or a beautiful one page website for your new startup, we do it all.</p>
+        </div>
+        <div class="services-description" id="des_2">
+          <h4>UX CONSULTING</h3>
+          <p>Are you trying to get your users to sign up or subscribe but just can’t quite get them there? We can help you optimize your user experience to achieve your goals.</p>
+        </div>
+        <div class="services-description" id="des_3">
+          <h4>BRAND</h3>
+          <p>Do you have a story to tell? We have the expertise to give your brand the attention and professional look and feel it deserves.</p>
+        </div>
+        <div class="services-description" id="des_4">
+          <h4>SOCIAL MEDIA MANAGEMENT</h3>
+          <p>Overall Digital is proud to be partnering with Tamay to offer social media management. </p>
+        </div>
+        <div class="services-description" id="des_5">
+          <h4>PHOTOGRAPHY</h3>
+          <p>We work with top London-based photographers to bring the best content possible to you. We manage all the production process so all you have to do is tell us what you want and wait for the magic to happen.</p>
+        </div> 
+      </div>
+    </div>
+    <div class="landing-contact">
+      <h3>know everything about our <br>services</h3>
+      <%= link_to services_path, class: "text-decoration-none" do %>
+        <div class="button-prim">
+          <div class="d-flex align-items-center">
+            <h6>FIND OUT</h6>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<%  
+=begin %>
     <div class="services-cards" >
       <div class="services-cards__card card_yellow ">
         <div class="services-cards__card-text">
@@ -28,6 +113,9 @@
         <%= image_tag 'home-services-consulting.svg', class: "services-cards__card-image" %>
       </div>
     </div>
+    <%
+=end 
+%>
   </div>
 </div>
 
@@ -58,27 +146,101 @@
           <h6>CONTACT US</h6>
           <i class="fas fa-chevron-right"></i>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
 <script>
-  ScrollReveal({ reset: false });
-  ScrollReveal().reveal('.services-cards',
-                        { delay: 200 },
-                        { duration: 1200 });
-  ScrollReveal().reveal('.rotate',
-                        { delay: 200 },
-                        { duration: 2400 });
-  ScrollReveal().reveal('.services',
-                        { delay: 400 },
-                        { duration: 2400 });
-  ScrollReveal().reveal('.landing-about-us',
-                        { delay: 200 },
-                        { duration: 2400 });
-  ScrollReveal().reveal('.landing-contact',
-                        { delay: 200 },
-                        { duration: 2400 });
+  // ChangeColor effect
+    const colors = ["#66FF88", "#FF7066", "#66D9FF"]
+
+    function changeColor(element) {
+      element.children[1].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]
+    };
+
+  // ShowDescription effect
+    const descriptions = document.getElementsByClassName('services-description')
+    
+    function showDesc(element) {
+      for (i of descriptions) {
+        if (element.id.charAt(4) == i.id.charAt(4)) {
+          i.style.opacity = 1
+        }
+      }    
+    }
+
+    function getActiveDescription(element) {
+      for (i of descriptions) {   
+        if (i.style.opacity == 1) {
+          actualActiveDescription = i;
+          if (element.children[2] != i) {
+            actualActiveDescription.style.opacity = ""
+          }
+        }
+      }
+    };
+
+  // OpenDescription on mobile and tablet version
+    const tablet = window.matchMedia('(min-width: 760px) and (max-width: 1019.9px)');
+    const mobile = window.matchMedia('(max-width: 759px)');
+    const hiddenElements = document.getElementsByClassName('services-description__hidden')
+
+    function openDescription(element) {
+  
+      if ((tablet.matches) || (mobile.matches)) {
+        if (element.nextElementSibling.style.display == "") {
+          element.nextElementSibling.style.display = "block"
+        } else {
+          element.nextElementSibling.style.display = ""
+        }
+      }
+
+      for (i of hiddenElements) {
+        if (i.style.display == 'block') {
+          activeElement = i;
+          if (element.nextElementSibling != i) {
+            activeElement.style.display = ""
+          }
+        }
+      }
+    }
+
+  // Show the first description to let the user know that the headers are clickable
+  const section = document.querySelector('.services');
+  const firstService = document.getElementsByClassName('services-section')[0];
+  const secondService = document.getElementsByClassName('services-section')[1];
+  const underline = firstService.children[1]   
+
+  secondService.addEventListener('click', () => {
+    firstService.style.opacity = "";
+    underline.style.opacity = "";
+    underline.style.padding = "";
+    underline.style.backgroundColor = "";
+  });
+
+  function demo() {
+    if ((tablet.matches) || (mobile.matches)) {
+      
+      firstService.click();
+      firstService.style.opacity = 1;
+      underline.style.opacity = 1;
+      underline.style.padding = "9px 78px";
+      underline.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]; 
+    }
+  };
+
+  const openFirstDescription = function(entries) {
+    if (entries[0].isIntersecting === true) {
+      demo();
+      observer.disconnect();
+    }
+  }
+
+  const observer = new IntersectionObserver(openFirstDescription, {
+    threshold: 0.65
+  });
+
+  observer.observe(section);
 </script>
 
 

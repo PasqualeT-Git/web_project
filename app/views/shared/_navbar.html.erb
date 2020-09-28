@@ -1,7 +1,7 @@
 <div class="content-navbar">
-  <%= link_to root_path do %>
+  <%= link_to root_path, id: "navbar-home__link" do %>
     <div class="navbar-section__brand">
-      <%= image_tag 'logo.svg', class: "navbar-logo" %>
+      <%= image_tag 'logo.svg', class: "navbar-selector__img" %>
       <p>home</p>
     </div>
     <div class="navbar-section__logosymbol">
@@ -9,17 +9,82 @@
     </div>
   <% end %>
   <div class="navbar-section__options">
-    <%= link_to new_customer_path do %>
-      <div class="navbar-selector">
-        <%= image_tag 'icon-mail.svg', class: "navbar-selector__img" %>
-        <p>Contact us</p>
-      </div>
-    <% end %>
-    <%= link_to about_path do %>
-      <div class="navbar-selector">
-        <%= image_tag 'icon-about_us.svg', class: "navbar-selector__img" %>
-        <p>About us</p>
-      </div>
+    <% if request.env['PATH_INFO'] == '/about' %>
+      <%= link_to services_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector" id="services-icon">
+          <%= image_tag 'icon-services.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
+          <p>services</p>
+        </div>
+      <% end %>
+      <%= link_to new_customer_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
+          <p>contact us</p>
+        </div>
+      <% end %>
+      <%= link_to about_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-about_us.svg', class: "navbar-selector__img" %>
+          <p>about us</p>
+        </div>
+      <% end %>
+    <% elsif request.env['PATH_INFO'] == '/customers/new' %>
+      <%= link_to services_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector" id="services-icon">
+          <%= image_tag 'icon-services.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
+          <p>services</p>
+        </div>
+      <% end %>
+      <%= link_to new_customer_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img" %>
+          <p>contact us</p>
+        </div>
+      <% end %>
+      <%= link_to about_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-about_us.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
+          <p>about us</p>
+        </div>
+      <% end %>
+    <% elsif request.env['PATH_INFO'] == '/services' %>
+      <%= link_to services_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector" id="services-icon">
+          <%= image_tag 'icon-services.svg', class: "navbar-selector__img" %>
+          <p>services</p>
+        </div>
+      <% end %>
+      <%= link_to new_customer_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
+          <p>contact us</p>
+        </div>
+      <% end %>
+      <%= link_to about_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-about_us.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
+          <p>about us</p>
+        </div>
+      <% end %>
+    <% else %>
+      <%= link_to services_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector" id="services-icon">
+          <%= image_tag 'icon-services.svg', class: "navbar-selector__img" %>
+          <p>services</p>
+        </div>
+      <% end %>
+      <%= link_to new_customer_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img" %>
+          <p>contact us</p>
+        </div>
+      <% end %>
+      <%= link_to about_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-about_us.svg', class: "navbar-selector__img" %>
+          <p>about us</p>
+        </div>
+      <% end %>
     <% end %>
     <% if current_user %>
       <%= link_to rails_admin_path do %>
@@ -32,8 +97,3 @@
   </div>
 </div>
 
-<script>
-  ScrollReveal().reveal('.content-navbar',
-                        { delay: 800 },
-                        { duration: 800 });
-</script>
