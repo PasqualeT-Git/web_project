@@ -131,7 +131,7 @@ h1, h3, h2 {
 }
 
 .services-section {
-  opacity: 56%;
+  opacity: 0.5;
   font-family: $headers;
   width: fit-content;
   position: relative;
@@ -368,7 +368,7 @@ h1, h3, h2 {
 }
 
 // media queries //
-@media (min-width: 319px) and (max-width: 375.9px){
+@media (min-width: 319px) and (max-width: 374.9px){
   .banner-hero__img {
     margin-top: -42px;
     margin-left: 211px;
@@ -377,6 +377,10 @@ h1, h3, h2 {
 
   .services-underline {
     padding: 6px 0;
+  }
+
+  .services h3 {
+    font-size: 29px;
   }
 
   .services-section {
