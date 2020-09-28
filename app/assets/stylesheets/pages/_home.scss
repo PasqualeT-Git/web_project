@@ -11,8 +11,12 @@ body {
 }
 
 
-h5, h6, .know_more, .button_contact_us{
+h5,h6, .know_more, .button_contact_us{
   font-weight: bold;
+}
+
+h6 {
+  font-size: 18px;
 }
 
 h1, h3, h2 {
@@ -23,7 +27,7 @@ h1, h3, h2 {
 // hero section //
 
 .banner-hero {
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
   width: 308px;
   z-index: 10;
@@ -35,10 +39,15 @@ h1, h3, h2 {
 
 .banner-hero__img {
   position: absolute;
-  margin-top: -40px;
-  margin-left: 180px;
+  margin-top: -30px;
+  margin-left: 220px;
+  width: 48px;
   z-index: -10;
   animation: hero-image_opacity .8s ease-out;
+}
+
+.banner-hero__img-contact {
+  margin-left: 100px !important;
 }
 
 // animation hero //
@@ -272,6 +281,10 @@ h1, h3, h2 {
     font-size: 48px;
   }
 
+  .banner-hero__img-contact {
+    margin-left: 120px !important;
+  }
+
   .services-cards__card-image {
     margin-left: 200px;
   }
@@ -298,6 +311,10 @@ h1, h3, h2 {
     margin-left: 240px;
   }
 
+  .banner-hero__img-contact {
+    margin-left: 140px !important;
+  }
+
   .landing-about-us__content {
     padding: 80px 160px;
   }
@@ -306,7 +323,7 @@ h1, h3, h2 {
 
 @media screen and (min-width: 1280px) {
   .banner-hero__h1 {
-    margin: 160px 120px;
+    margin: 160px 80px;
     position: relative;
     width: 420px;
     font-size: 68px;
@@ -317,11 +334,12 @@ h1, h3, h2 {
   }
 
   .banner-hero {
-    max-width: 560px;
+    width: 560px;
   }
 
+
   .banner-hero__img {
-    margin: -200px 0 0 480px;
+    margin: -200px 0 0 640px;
   }
 
   .services {
