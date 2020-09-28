@@ -211,12 +211,15 @@
   const secondService = document.getElementsByClassName('services-section')[1];
   const underline = firstService.children[1]   
 
-  secondService.addEventListener('click', () => {
-    firstService.style.opacity = "";
-    underline.style.opacity = "";
-    underline.style.padding = "";
-    underline.style.backgroundColor = "";
+  document.addEventListener('click', function(e) {
+    if (e.target.offsetParent.classList.contains('services-section') === true) {
+      firstService.style.opacity = "";
+      underline.style.opacity = "";
+      underline.style.padding = "";
+    }
   });
+
+
 
   function demo() {
     if ((tablet.matches) || (mobile.matches)) {
