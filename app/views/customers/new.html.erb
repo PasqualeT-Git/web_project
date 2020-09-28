@@ -1,32 +1,33 @@
 <div class="container-overall container-overall__contact">
-  <div class="banner-hero contact-header">
-    <h1 class="banner-hero__h1 animation-hero">Let us know what you need and we'll get back to you shortly:</h1>
-    <img src="<%= image_path 'coulored-logo.svg' %>" class="banner-hero__img rotate" alt="overall-digital logo">
+  <div class="contact-container">
+    <div class="banner-hero contact-header">
+      <h1 class="banner-hero__h1 animation-hero"> Hello! <br> Let's talk </h1>
+      <img src="<%= image_path 'coulored-logo.svg' %>" class="banner-hero__img banner-hero__img-contact rotate" alt="overall-digital logo">
+    </div>
+    <div class="contact-content" >
+      <h6>We only need to know:</h6>
+      <%= simple_form_for(@customer) do |f| %>
+        <%= f.input :name,
+          label: "your full name",
+          placeholder: 'Thomas Shelby',
+          :required => false,
+          input_html: { class: 'label-text textarea' }  %>
+        <%= f.input :e_mail,
+          label: "your mail",
+          placeholder: 'thomas@shelbybros.com',
+          :required => false,
+          input_html: { class: 'label-text textarea' } %>
+        <%= f.input :message,
+          label: "and how can we help you?",
+          placeholder: 'we are growing fast and we need to have online presence...',
+          :required => false,
+          input_html: { class: 'label-text__msg' } %>
+        <%= f.submit "Submit",
+          disable_with: 'Submiting...',
+          class: "button-prim"%>
+      <% end %>
+    </div>
   </div>
-  <div class="contact-content" >
-    <%= simple_form_for(@customer) do |f| %>
-      <%= f.input :name,
-        label: "full name",
-        placeholder: 'Thomas Shelby',
-        input_html: { class: 'label-text' }  %>
-      <%= f.input :e_mail,
-        label: "mail",
-        placeholder: 'thomas@shelbybros.com',
-        input_html: { class: 'label-text' } %>
-      <%= f.input :phone_number,
-        label: "phone number (optional)",
-        placeholder: '+44 0771 000 0000',
-        input_html: { class: 'label-text' } %>
-      <%= f.input :message,
-        label: "how can we help you?",
-        placeholder: 'enter your message here...',
-        input_html: { class: 'label-text__msg' } %>
-      <%= f.submit "Submit",
-        disable_with: 'Submiting...',
-        class: "button-prim"%>
-    <% end %>
-  </div>
-
   <%# Modal for Welcome the customer %>
   <div class="welcome_modal" id="modal1" >
     <div class="modal-content">
