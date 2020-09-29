@@ -13,6 +13,14 @@
   margin-left: auto;
 }
 
+@media (min-width: 319px) and (max-width: 374.9px){
+  .container-footer {
+    width: 106%;
+    padding: 30px 19px 120px 19px;
+  }
+
+}
+
 
 @media (min-width: 760px) and (max-width: 1019.9px) {
   .container-footer {
