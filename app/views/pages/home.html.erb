@@ -4,12 +4,12 @@
     <img src="<%= image_path 'coulored-logo.svg' %>" class="banner-hero__img rotate" alt="overall-digital logo">
   </div>
   <div class="services">
-    <div class="landing_about-us__title" style="display: flex;">
+    <div class="landing-about-us__header" style="display: flex;">
       <h3 style="margin-right: 8px;">we are</h3>
       <%= image_tag 'logo.svg' %>
       <h3>Overall,</h3>
     </div>
-      <h3>and we develop.</h3>
+      <h3 id="header">and we develop.</h3>
     <div class="services-container">
       <div class="services">
         <div class="services-section"  onmouseover="changeColor(this), getActiveDescription(this), showDesc(this)" onclick="openDescription(this)" id="ser_1">
@@ -77,11 +77,11 @@
       </div>
     </div>
     <div class="landing-contact">
-      <h3>know everything about our <br>services</h3>
+      <h3>learn more about our services by clicking</h3>
       <%= link_to services_path, class: "text-decoration-none" do %>
         <div class="button-prim">
           <div class="d-flex align-items-center">
-            <h6>FIND OUT</h6>
+            <h6>HERE</h6>
             <i class="fas fa-chevron-right"></i>
           </div>
         </div>
@@ -122,7 +122,7 @@
 <div class="landing-about-us">
   <%= image_tag 'bg-gradient.png', class: "about-bg" %>
   <div class="landing-about-us__content">
-    <div class="landing_about-us__title">
+    <div class="landing-about-us__header">
       <%= image_tag 'logo.svg', class: "" %>
       <h3>us</h3>
     </div>
@@ -139,7 +139,7 @@
 
 <div class="container-overall">
   <div class="landing-contact">
-    <h2>Lets build your <br>story together</h2>
+    <h3>bringing your vision to life</h3>
     <div class="button-prim">
       <%= link_to new_customer_path do %>
         <div class="d-flex align-items-center">

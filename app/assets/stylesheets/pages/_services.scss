@@ -1,15 +1,39 @@
-.banner-services {
-  h1{
-    margin-left: 0;
-    width: 680px;
+.services--banner-hero__img {
+  margin-top: -36px;
+  margin-left: 135px;
+  width: 65px;
+  position: absolute;
+  z-index: -10;
+}
+
+.services--banner-hero__h1 {
+  width: 280px;
+}
+
+@media (min-width: 319px) and (max-width: 374.9px){
+  
+}
+
+@media (min-width: 760px) and (max-width: 1019.9px) {
+  .services--banner-hero__h1 {
+    width: 350px;
   }
 
-  img {
-    left: -120px;
-    bottom: -36px;
+  .services--banner-hero__img {
+    margin-top: -43px;
+    margin-left: 179px;
+    width: 76px;
   }
 }
 
-.conatainer-services {
-  margin: 0 auto;
+@media (min-width: 1020px) and (max-width: 1279.9px) {
+  .services--banner-hero__img {
+    margin-top: -44px;
+    margin-left: 204px;
+    width: 83px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
 }

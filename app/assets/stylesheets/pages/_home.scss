@@ -110,10 +110,6 @@ h1, h3, h2 {
 
 .services {
   position: relative;
-
-  h3 {
-    font-size: 36px;
-  }
 }
 
 .services-container {
@@ -200,13 +196,16 @@ h1, h3, h2 {
   margin-bottom: 160px;
 
   h2 {
-    font-size: 32px;
-    margin-bottom: 32px;
+    width: 290px;
+    font-size: 28px;
+    padding-bottom: 24px;
   }
 
   h3 {
-    font-size: 32px;
-    padding-bottom: 16px;
+    // width: 600px;
+    // font-size: 48px;
+    font-size: 28px;
+    padding-bottom: 24px;
   }
 }
 
@@ -275,15 +274,18 @@ h1, h3, h2 {
   object: cover;
 }
 
+.landing-about-us__header h3, #header {
+  font-size: 36px;
+}
 
-.landing_about-us__title {
+.landing-about-us__header {
   display: flex;
   flex-direction: row;
 
   h2 {
     margin-top: 16px;
-
   }
+
   img {
     width: 24px;
     height: 24px;
@@ -379,10 +381,6 @@ h1, h3, h2 {
     padding: 6px 0;
   }
 
-  .services h3 {
-    font-size: 29px;
-  }
-
   .services-section {
     h2 {
       font-size: 40px;
@@ -401,10 +399,6 @@ h1, h3, h2 {
     margin-top: 8px;
   }
 
-  .landing-contact h2{
-    font-size: 32px;
-  }
-
   .landing-about-us {
     width: 106%;
   }
@@ -413,6 +407,9 @@ h1, h3, h2 {
     padding: 32px;
   }
   
+  .landing-about-us__header h3,#header {
+    font-size: 31px;
+  }
 }
 
 @media (min-width: 760px) and (max-width: 1019.9px) {
@@ -432,28 +429,16 @@ h1, h3, h2 {
     margin-left: 249px;
   }
 
-  .services {
-    h3 {
-      font-size: 40px;
-    }
-  }
-
   .banner-hero__img-contact {
     margin-left: 120px !important;
   }
 
-  .services-cards__card-image {
-    margin-left: 200px;
-  }
-
-  .services-cards__card {
-    &:hover .services-cards__card-image {
-      margin-left: 180px;
-    }
-  }
-
   .landing-about-us__content {
     padding: 60px 120px;
+  }
+
+  .landing-about-us__header h3, #header {
+    font-size: 46px;
   }
 
   .services-desc {
@@ -489,14 +474,16 @@ h1, h3, h2 {
     padding: 11px 0px;
   }
 
-  .landing-contact h2{
-    font-size: 56px;
+  .landing-contact h3 {
+    font-size: 36px;
+    width: 400px;
   }
 }
 
 @media (min-width: 1020px) and (max-width: 1279.9px) {
 
   .banner-hero__h1 {
+    margin-top: 180px;
     width: 400px;
     font-size: 56px;
   }
@@ -514,10 +501,8 @@ h1, h3, h2 {
     padding: 80px 160px;
   }
 
-  .services {
-    h3 {
-      font-size: 48px;
-    }
+  .landing-about-us__header h3, #header {
+    font-size: 52px;
   }
 
   .services-container {
@@ -571,8 +556,9 @@ h1, h3, h2 {
     }
   }
 
-  .landing-contact h2{
-    font-size: 56px;
+  .landing-contact h3 {
+    font-size: 36px;
+    width: 400px;
   }
 }
 
@@ -596,13 +582,7 @@ h1, h3, h2 {
 
   .banner-hero__img {
     width: 95px;
-    margin: -200px 0 0 640px;
-  }
-
-  .services {
-    h3 {
-      font-size: 48px;
-    }
+    margin: -210px 0 0 440px;
   }
 
   .services-container {
@@ -612,6 +592,10 @@ h1, h3, h2 {
   .services-desc {
     display: block;
     height: 340px;
+  }
+
+  .services-underline {
+    padding: 11px 0px;
   }
 
   .services-section {
@@ -652,8 +636,13 @@ h1, h3, h2 {
     padding: 80px 200px;
   }
 
-  .landing-contact h2{
-    font-size: 56px;
+  .landing-about-us__header h3, #header {
+    font-size: 52px;
+  }
+
+  .landing-contact h3 {
+    font-size: 42px;
+    width: 460px;
   }
 }
 
