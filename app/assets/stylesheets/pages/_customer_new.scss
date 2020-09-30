@@ -53,6 +53,39 @@
   padding: 8px;
 }
 
+.name-error-pop_up, .e-mail-error-pop_up, .message-error-pop_up {
+  display: none;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.error-label {
+  width: fit-content;
+  justify-content: space-around;
+  background-color: antiquewhite;
+  color: red;
+  
+  border-radius: 6px;
+
+  p {
+    margin-bottom: 0;
+    margin-right: 6px;
+  }
+
+  i {
+    margin: 0 8px;
+  }
+}
+
+#chevron-up {
+  font-size: xx-large;
+  color: antiquewhite;
+  position: absolute;
+  top: -19px;
+  left: 34px;
+}
+
+
 .contact-textcontainer {
   display: flex;
   flex-direction: column;

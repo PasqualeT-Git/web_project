@@ -6,38 +6,123 @@
     </div>
     <div class="contact-content" >
       <h6>We only need to know:</h6>
-      <%= simple_form_for(@customer) do |f| %>
+      <%= simple_form_for @customer, remote: true, html: {id: "form"} do |f| %>   
         <%= f.input :name,
           label: "your full name",
           placeholder: 'Thomas Shelby',
-          :required => false,
-          input_html: { class: 'label-text textarea' }  %>
+          required: false,
+          input_html: { class: 'label-text textarea', 
+                        style: 'margin-bottom: 0'} %>
+          <div class="name-error-pop_up">
+            <div class="d-flex align-items-center error-label">
+              <i class="fas fa-times-circle"></i>
+              <p>please insert a name</p>
+            </div>
+            <i class="fas fa-caret-up" id="chevron-up"></i>
+          </div>
         <%= f.input :e_mail,
           label: "your mail",
           placeholder: 'thomas@shelbybros.com',
-          :required => false,
-          input_html: { class: 'label-text textarea' } %>
+          required: false,
+          input_html: { class: 'label-text textarea',
+                        style: 'margin-bottom: 0'} %>
+          <div class="e-mail-error-pop_up">
+            <div class="d-flex align-items-center error-label">
+              <i class="fas fa-times-circle"></i>
+              <p>please enter a valid e-mail</p>
+            </div>
+            <i class="fas fa-caret-up" id="chevron-up"></i>
+          </div>
         <%= f.input :message,
           label: "and how can we help you?",
           placeholder: 'we are growing fast and we need to have online presence...',
-          :required => false,
-          input_html: { class: 'label-text__msg' } %>
+          required: false,
+          input_html: { class: 'label-text__msg',
+                        style: 'margin-bottom: 0' } %>
+          <div class="message-error-pop_up">
+            <div class="d-flex align-items-center error-label">
+              <i class="fas fa-times-circle"></i>
+              <p>please insert a message</p>
+            </div>
+            <i class="fas fa-caret-up" id="chevron-up"></i>
+          </div>
         <%= f.submit "Submit",
           disable_with: 'Submiting...',
-          class: "button-prim"%>
+          class: "button-prim",
+          id: "hidden-button" %>      
       <% end %>
     </div>
   </div>
-  <%# Modal for Welcome the customer %>
-  <div class="welcome_modal" id="modal1" >
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Your message has been sent. We will contact you shortly. Thank you.</p>
+  <%# Modal to greet the customer %>
+    <button type="button" id="modal-button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" hidden>
+      Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Great!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            We got your message, thanks for contacting us. Someone will contact you.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
 <script>
+  // Get a feedback when a user apply to the form
+  var buttonModal = document.getElementById('hidden-button');
+  var modalButton = document.getElementById('modal-button');
+
+  var form = document.getElementById('form');
+  var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  
+  form.addEventListener('submit', () => {
+    var name = document.getElementById('customer_name').value;
+    var email = document.getElementById('customer_e_mail').value;
+    var message = document.getElementById('customer_message').value;
+    var nameError = document.querySelector('.name-error-pop_up');
+    var mailError = document.querySelector('.e-mail-error-pop_up');
+    var messageError = document.querySelector('.message-error-pop_up');
+
+    if (!(email.match(regex))) {
+      mailError.style.display = "block";
+    } else {
+      mailError.style.display = "";
+    }
+    if (name === "") {
+      nameError.style.display = "block";
+    } else {
+      nameError.style.display = "";
+    }
+    if (message === "") {
+      messageError.style.display = "block";
+    } else {
+      messageError.style.display = "";
+    }
+
+    if ((message != "") && (name != "") && (email.match(regex))) {
+      error = false
+    } else {
+      error = true
+    };
+
+    if (error === false) {
+      modalButton.click();
+    }
+  });
+
+
   ScrollReveal().reveal('.rotate',
                         { delay: 800 },
                         { duration: 1200 });

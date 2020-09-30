@@ -13,9 +13,8 @@ class CustomersController < ApplicationController
         UserMailer.with(customer: @customer).welcome_email.deliver
                
         format.html { redirect_to(new_customer_path) }
-        format.js { render :partial => 'views/customers/create.js.erb' }
+        format.js
         #raise
-        #redirect_to contact_path
       else
         format.html { render action: 'new' }
       end
