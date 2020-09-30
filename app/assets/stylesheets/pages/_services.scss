@@ -13,7 +13,7 @@
 
 .services--element {
   margin-bottom: 64px;
-  box-shadow: 5px 15px 30px rgba(0,0,0,0.05);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.05);
   padding: 20px;
 }
 
@@ -61,7 +61,7 @@
 @media (min-width: 319px) and (max-width: 374.9px){
   .services--banner-hero__img {
     margin-top: -39px;
-    margin-left: 82px;
+    margin-left: 102px;
   }
 
   .services--element {
@@ -92,6 +92,7 @@
 }
 
 @media (min-width: 760px) and (max-width: 1019.9px) {
+  
   .services--banner-hero__h1 {
     width: 350px;
     font-size: 58px;
@@ -122,6 +123,7 @@
 
   .services--element {
     padding: 40px;
+    box-shadow: 5px 15px 30px rgba(0,0,0,0.05);
   }
 
   .services--element-header {
@@ -155,11 +157,13 @@
 
   .services--banner-hero__img {
     margin-top: -48px;
+    margin-left: 156px;
     width: 80px;
   }
   
   .services--element {
     padding: 70px;
+    box-shadow: 5px 15px 30px rgba(0,0,0,0.05);
   }
 
   .services--element-header {
