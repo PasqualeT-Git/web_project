@@ -152,14 +152,14 @@
 </div>
 <script>
   // ChangeColor effect
-    const colors = ["#66FF88", "#FF7066", "#66D9FF"]
+    var colors = ["#66FF88", "#FF7066", "#66D9FF"]
 
     function changeColor(element) {
       element.children[1].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]
     };
 
   // ShowDescription effect
-    const descriptions = document.getElementsByClassName('services-description')
+    var descriptions = document.getElementsByClassName('services-description')
     
     function showDesc(element) {
       for (i of descriptions) {
@@ -181,9 +181,9 @@
     };
 
   // OpenDescription on mobile and tablet version
-    const tablet = window.matchMedia('(min-width: 760px) and (max-width: 1019.9px)');
-    const mobile = window.matchMedia('(max-width: 759px)');
-    const hiddenElements = document.getElementsByClassName('services-description__hidden')
+    var tablet = window.matchMedia('(min-width: 760px) and (max-width: 1019.9px)');
+    var mobile = window.matchMedia('(max-width: 759px)');
+    var hiddenElements = document.getElementsByClassName('services-description__hidden')
 
     function openDescription(element) {
   
@@ -206,10 +206,10 @@
     }
 
   // Show the first description to let the user know that the headers are clickable
-  const section = document.querySelector('.services');
-  const firstService = document.getElementsByClassName('services-section')[0];
-  const secondService = document.getElementsByClassName('services-section')[1];
-  const underline = firstService.children[1]   
+  var section = document.querySelector('.services');
+  var firstService = document.getElementsByClassName('services-section')[0];
+  var secondService = document.getElementsByClassName('services-section')[1];
+  var underline = firstService.children[1]   
 
   document.addEventListener('click', function(e) {
     if (e.target.offsetParent.classList.contains('services-section') === true) {
@@ -232,14 +232,14 @@
     }
   };
 
-  const openFirstDescription = function(entries) {
+  var openFirstDescription = function(entries) {
     if (entries[0].isIntersecting === true) {
       demo();
       observer.disconnect();
     }
   }
 
-  const observer = new IntersectionObserver(openFirstDescription, {
+  var observer = new IntersectionObserver(openFirstDescription, {
     threshold: 0.65
   });
 
