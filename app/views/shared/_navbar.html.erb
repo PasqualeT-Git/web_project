@@ -16,16 +16,16 @@
           <p>services</p>
         </div>
       <% end %>
-      <%= link_to new_customer_path, class: "text-decoration-none" do %>
-        <div class="navbar-selector">
-          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
-          <p>contact us</p>
-        </div>
-      <% end %>
       <%= link_to about_path, class: "text-decoration-none" do %>
         <div class="navbar-selector">
           <%= image_tag 'icon-about_us.svg', class: "navbar-selector__img" %>
           <p>about us</p>
+        </div>
+      <% end %>
+      <%= link_to new_customer_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
+          <p>contact us</p>
         </div>
       <% end %>
     <% elsif request.env['PATH_INFO'] == '/customers/new' %>
@@ -35,16 +35,16 @@
           <p>services</p>
         </div>
       <% end %>
-      <%= link_to new_customer_path, class: "text-decoration-none" do %>
-        <div class="navbar-selector">
-          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img" %>
-          <p>contact us</p>
-        </div>
-      <% end %>
       <%= link_to about_path, class: "text-decoration-none" do %>
         <div class="navbar-selector">
           <%= image_tag 'icon-about_us.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
           <p>about us</p>
+        </div>
+      <% end %>
+      <%= link_to new_customer_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img" %>
+          <p>contact us</p>
         </div>
       <% end %>
     <% elsif request.env['PATH_INFO'] == '/services' %>
@@ -54,16 +54,16 @@
           <p>services</p>
         </div>
       <% end %>
-      <%= link_to new_customer_path, class: "text-decoration-none" do %>
-        <div class="navbar-selector">
-          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
-          <p>contact us</p>
-        </div>
-      <% end %>
       <%= link_to about_path, class: "text-decoration-none" do %>
         <div class="navbar-selector">
           <%= image_tag 'icon-about_us.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
           <p>about us</p>
+        </div>
+      <% end %>
+      <%= link_to new_customer_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img", style: "opacity: 75%;" %>
+          <p>contact us</p>
         </div>
       <% end %>
     <% else %>
@@ -73,16 +73,16 @@
           <p>services</p>
         </div>
       <% end %>
-      <%= link_to new_customer_path, class: "text-decoration-none" do %>
-        <div class="navbar-selector">
-          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img" %>
-          <p>contact us</p>
-        </div>
-      <% end %>
       <%= link_to about_path, class: "text-decoration-none" do %>
         <div class="navbar-selector">
           <%= image_tag 'icon-about_us.svg', class: "navbar-selector__img" %>
           <p>about us</p>
+        </div>
+      <% end %>
+      <%= link_to new_customer_path, class: "text-decoration-none" do %>
+        <div class="navbar-selector">
+          <%= image_tag 'icon-mail.svg', class: "navbar-selector__img" %>
+          <p>contact us</p>
         </div>
       <% end %>
     <% end %>
@@ -96,4 +96,19 @@
     <% end %>
   </div>
 </div>
+<script>
+  // Navbar appearing on scroll effect
+  // window.onscroll = function() {scrollFunction()}
+
+  // function scrollFunction() {
+  //   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  //     document.querySelector('.content-navbar').style.boxShadow = '0px 3px 4px 1px rgba(0, 0, 0, 0.1)'
+  //   } else if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+  //     document.querySelector('.content-navbar').style.boxShadow = '0px 3px 7px 3px rgba(0, 0, 0, 0.1)'
+  //   } else {
+  //     document.querySelector('.content-navbar').style.boxShadow = "none"
+  //   }
+  //   console.log(document.querySelector('.content-navbar').style.boxShadow);
+  // };
+</script>
 
